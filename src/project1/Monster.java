@@ -3,15 +3,15 @@ package project1;
 public class Monster {
 
     private String name = "Orc Lord";
-    private double health = 50;
-    private double stgh = 7;
-    private double damage = stgh * 0.65;
+    private float health = 50;
+    private float stgh = 7;
+    private float damage = stgh * 0.65;
     private int defence = 4;
     private int loot = 15;
     private String clan = "Orgrimmar";
-    private double speed = 15;
+    private float speed = 15;
     private int mana = 20;
-    private double buff = 1.5;
+    private float buff = 1.5;
 
     public void printStats() {
         System.out.println("Monster " + name + " from clan " + clan + " has appeared in front of you!");
@@ -25,7 +25,7 @@ public class Monster {
     }
 // zadawanie obrazen
 
-    public void applyDamage(Hero dmg) {
+    public void applyDamage(DMG dmg) {
         health = 0;
 
 
@@ -42,5 +42,33 @@ public class Monster {
             printHp();
         } else
             printHp();
+    }
+    // Taunt
+
+    public void getTaunt() {
+        Random random = new Random();
+        int value = random.nextInt(4);
+
+        switch (random) ;
+        case 0
+        ;
+        System.out.println("Obelga 1");
+        break;
+        case 1
+        ;
+        System.out.println("Obelga 2");
+        break;
+        case 2
+        ;
+        System.out.println("Obelga 3");
+        break;
+        case 3
+        ;
+        System.out.println("Obelga 4");
+        break;
+        default
+        ;
+        System.out.println("[UNEXPECTED ERROR]");
+
     }
 }
