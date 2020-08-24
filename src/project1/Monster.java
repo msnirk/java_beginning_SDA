@@ -12,7 +12,7 @@ public class Monster {
     private int loot = 15;
     private String clan = "Orgrimmar";
     private double speed = 15;
-    private int mana = 20;
+    private double mana = 20;
     private double buff = 1.5;
 
     public void printStats() {
@@ -25,49 +25,62 @@ public class Monster {
     private void printHp() {
         System.out.println("He have " + health + " left.");
     }
-// TODO: applyDmg + buffs
 
-    // zadawanie obrazen
+//     zadawanie obrazen
 
-//    public void applyDamage(DMG dmg) {
-//        health = 0;
-//
-//
-//    }
+    public void applyDamage() {
+        health -= 5;
+        System.out.println("You've deal 5 dmg to Orc Lord");
+        if (health <= 0) {
+            System.out.println("Orc Lord is dead");
+        }
+        if (health > 0) {
+            printHp();
+            buffs();
+            getTaunt();
+
+        }
+
+    }
 
 // zaladowanie buff'a
 
-    public void buffs() {
-        if (health <= health * 0.75) {
-            health %= health * buff;
+    private void buffs() {
+        if (health <= 20) {
+            health = health * buff;
             speed = speed * buff;
             stgh = stgh * buff;
             System.out.println("UGGGHHHHAAAA!");
-            printHp();
-        } else
-            printHp();
+            shortStats();
+        }
+
+    }
+
+    // short stats
+    private void shortStats() {
+        System.out.println("Orc Lord now have " + health + " HP " + stgh + " strength and " + speed + "speed.");
     }
     // Taunt
 
-    public void getTaunt() {
+    private void getTaunt() {
         Random random = new Random();
         int value = random.nextInt(4);
 
         switch (value) {
             case 0: {
-                System.out.println("Obelga 1");
+                System.out.println("Ahh Fresh meat.");
             }
             break;
             case 1: {
-                System.out.println("Obelga 2");
+                System.out.println("Die!");
             }
             break;
             case 2: {
-                System.out.println("Obelga 3");
+                System.out.println("You smell tasty!");
             }
             break;
             case 3: {
-                System.out.println("Obelga 4");
+                System.out.println("Guys, we have a BBQ party tonight!");
             }
             break;
             default:

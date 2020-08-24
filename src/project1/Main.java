@@ -16,7 +16,7 @@ public class Main {
 
         Monster orc = new Monster();
         orc.printStats();
-        orc.getTaunt();
+        orc.applyDamage();
 
     }
 }

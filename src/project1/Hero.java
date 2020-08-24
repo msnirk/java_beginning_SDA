@@ -21,6 +21,7 @@ public class Hero {
     public void setName(String name) {
         this.name = name;
     }
+
 }
 
 // static zamyka cos w classie zamiast w instancji
