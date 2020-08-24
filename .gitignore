@@ -1,4 +1,4 @@
-# git ignore file
+# git ignore files
 .idea/*
-*.iml
 out/*
+*.iml

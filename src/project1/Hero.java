@@ -2,6 +2,7 @@ package project1;
 
 public class Hero {
     public static int heroesCount = 0;
+// TODO: put scanner in the name and gander.
 
     private String name = "Maniek";
     private String gender = "Mężczyzna";

@@ -25,7 +25,9 @@ public class Monster {
     private void printHp() {
         System.out.println("He have " + health + " left.");
     }
-// zadawanie obrazen
+// TODO: applyDmg + buffs
+
+    // zadawanie obrazen
 
 //    public void applyDamage(DMG dmg) {
 //        health = 0;
