@@ -10,7 +10,7 @@ public class Monster {
     private double damage = stgh * 0.65;
     private int defence = 4;
     private int loot = 15;
-    private String clan = "Orgrimmar";
+    private String clan = "Ogrimmar";
     private double speed = 15;
     private double mana = 20;
     private double buff = 1.5;
@@ -29,8 +29,8 @@ public class Monster {
 //     zadawanie obrazen
 
     public void applyDamage() {
-        health -= 5;
-        System.out.println("You've deal 5 dmg to Orc Lord");
+        health -= 10;
+        System.out.println("You've deal 10 dmg to Orc Lord");
         if (health <= 0) {
             System.out.println("Orc Lord is dead");
         }
@@ -46,7 +46,7 @@ public class Monster {
 // zaladowanie buff'a
 
     private void buffs() {
-        if (health <= 20) {
+        if (health < 15) {
             health = health * buff;
             speed = speed * buff;
             stgh = stgh * buff;
@@ -72,7 +72,7 @@ public class Monster {
             }
             break;
             case 1: {
-                System.out.println("Die!");
+                System.out.println("");
             }
             break;
             case 2: {
