@@ -1,17 +1,19 @@
 package project1;
 
+import java.util.Random;
+
 public class Monster {
 
     private String name = "Orc Lord";
-    private float health = 50;
-    private float stgh = 7;
-    private float damage = stgh * 0.65;
+    private double health = 50;
+    private double stgh = 7;
+    private double damage = stgh * 0.65;
     private int defence = 4;
     private int loot = 15;
     private String clan = "Orgrimmar";
-    private float speed = 15;
+    private double speed = 15;
     private int mana = 20;
-    private float buff = 1.5;
+    private double buff = 1.5;
 
     public void printStats() {
         System.out.println("Monster " + name + " from clan " + clan + " has appeared in front of you!");
@@ -25,11 +27,11 @@ public class Monster {
     }
 // zadawanie obrazen
 
-    public void applyDamage(DMG dmg) {
-        health = 0;
-
-
-    }
+//    public void applyDamage(DMG dmg) {
+//        health = 0;
+//
+//
+//    }
 
 // zaladowanie buff'a
 
@@ -49,26 +51,26 @@ public class Monster {
         Random random = new Random();
         int value = random.nextInt(4);
 
-        switch (random) ;
-        case 0
-        ;
-        System.out.println("Obelga 1");
-        break;
-        case 1
-        ;
-        System.out.println("Obelga 2");
-        break;
-        case 2
-        ;
-        System.out.println("Obelga 3");
-        break;
-        case 3
-        ;
-        System.out.println("Obelga 4");
-        break;
-        default
-        ;
-        System.out.println("[UNEXPECTED ERROR]");
+        switch (value) {
+            case 0: {
+                System.out.println("Obelga 1");
+            }
+            break;
+            case 1: {
+                System.out.println("Obelga 2");
+            }
+            break;
+            case 2: {
+                System.out.println("Obelga 3");
+            }
+            break;
+            case 3: {
+                System.out.println("Obelga 4");
+            }
+            break;
+            default:
+                System.out.println("[UNEXPECTED ERROR]");
 
+        }
     }
 }
