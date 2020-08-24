@@ -23,7 +23,7 @@ public class Monster {
 // pozostale zycie
 
     private void printHp() {
-        System.out.println("He have " + health + " left.");
+        System.out.println("He have " + health + " HP left.");
     }
 
 //     zadawanie obrazen
