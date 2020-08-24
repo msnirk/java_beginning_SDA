@@ -64,27 +64,31 @@ public class Monster {
 
     private void getTaunt() {
         Random random = new Random();
-        int value = random.nextInt(4);
+        int value = random.nextInt(5);
 
         switch (value) {
             case 0: {
-                System.out.println("Ahh Fresh meat.");
+                System.out.println("Never gonna give you up");
             }
             break;
             case 1: {
-                System.out.println("");
+                System.out.println("Never gonna let you down");
             }
             break;
             case 2: {
-                System.out.println("You smell tasty!");
+                System.out.println("Never gonna run around and desert you");
             }
             break;
             case 3: {
-                System.out.println("Guys, we have a BBQ party tonight!");
+                System.out.println("Never gonna make you cry");
+            }
+            break;
+            case 4: {
+                System.out.println("Never gonna say goodbye");
             }
             break;
             default:
-                System.out.println("[UNEXPECTED ERROR]");
+                System.out.println("Never gonna tell a lie and hurt you");
 
         }
     }
